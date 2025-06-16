@@ -134,7 +134,7 @@ namespace CodeTracker.GoldRino456
         {
             DateTime dateTime = DateTime.UnixEpoch;
 
-            var dateTimeValidation = AnsiConsole.Prompt(
+            AnsiConsole.Prompt(
                 new TextPrompt<string>(promptMessage)
                 .Validate((n) => DateTime.TryParseExact(n.ToString().Trim(),"MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime)
                 ? ValidationResult.Success()
